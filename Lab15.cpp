@@ -73,7 +73,7 @@ int main()
         return 0;
     }
 
-    vector<Movie> movies = {};
+    vector<Movie> movies;
     string title, screenwriter;
     int year;
 
