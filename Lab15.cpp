@@ -1,6 +1,7 @@
 #include <iostream>
-#include <array>
+#include <vector>
 #include <string>
+#include <fstream>
 
 using namespace std;
 
@@ -14,44 +15,69 @@ class Movie
 
     public:
         // constructor.
-        Movie(string title, int year, string screenwriter)
+        Movie(string t, int year, string s)
         {
-            title = title;
+            title = t;
             yearReleased = year;
-            screenwriter = screenwriter;
+            screenwriter = s;
         }
 
         // setters & getters
-        void setTitle(string t) {
-
+        void setTitle(string t)
+        {
+            title = t;
         }
 
-        void setTitle(string t) {
-            
+        void setYear(int year) 
+        {
+            yearReleased = year;
         }
 
-        void setTitle(string t) {
-            
+        void setScreenwriter(string s) 
+        {
+            screenwriter = s;
         }
 
         // getters
-        void getTitle(string t)
+        string getTitle() const
         {
-
-        }
-
-        void getTitle(string t)
-        {
-            
+            return title;
         }
         
-        void getTitle(string t)
+        int getYear() const
         {
-            
+            return yearReleased;
         }
+
+        string getScreenwriter() const
+        {
+            return screenwriter;
+        }
+
+        void print()
+        {
+            cout << "Movie: " << title << endl;
+            cout << "\tYear Released" << yearReleased << endl;
+            cout << "\tScreenwriter: " << screenwriter << endl;
+            cout << endl;
+        }
+
 };
 
 int main()
 {
+    ifstream inFile("input.txt");
+    if (!inFile)
+    {
+        cout << "Error." << endl;
+        return 0;
+    }
+
+    vector<Movie> movies = {};
+    string title, screenwriter;
+
+    
+
+
 
 }
