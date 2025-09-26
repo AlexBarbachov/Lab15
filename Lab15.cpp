@@ -57,7 +57,7 @@ class Movie
         void print()
         {
             cout << "Movie: " << title << endl;
-            cout << "\tYear Released" << yearReleased << endl;
+            cout << "\tYear Released: " << yearReleased << endl;
             cout << "\tScreenwriter: " << screenwriter << endl;
             cout << endl;
         }
