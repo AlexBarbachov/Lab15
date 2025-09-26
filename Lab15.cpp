@@ -75,9 +75,20 @@ int main()
 
     vector<Movie> movies = {};
     string title, screenwriter;
+    int year;
 
-    
 
+    while (getline(inFile, title) && inFile >> year && inFile.ignore() && getline(inFile, screenwriter))
+    {
+        Movie mov(title, year, screenwriter);
+        movies.push_back(mov);
+    }
+
+    inFile.close();
+
+    for (int i = 0; i < movies.size(); i++){
+        movies[i].print();
+    }
 
 
 }
